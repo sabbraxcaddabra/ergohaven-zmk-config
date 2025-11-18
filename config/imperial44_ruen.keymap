@@ -77,14 +77,30 @@
         };
     };
 
+    behaviors {
+        td_dotcom: td_dotcom {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_DOTCOM";
+            #binding-cells = <0>;
+            bindings = <&kp SEMI>, <&kp COLON>;
+        };
+
+        td_dotcom_en: td_dotcom_en {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_DOTCOM_EN";
+            #binding-cells = <0>;
+            bindings = <&en SEMI>, <&en COLON>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         en {
             bindings = <
-&kp ESC    &kp Q  &kp W  &kp E  &kp R      &kp T                          &kp Y  &kp U      &kp I      &kp O    &kp P  &kp BACKSPACE
-&kp TAB    &kp A  &kp S  &kp D  &kp F      &kp G                          &kp H  &kp J      &kp K      &kp L    &none  &kp LGUI
-&kp LSHFT  &kp Z  &kp X  &kp C  &kp V      &kp B  &kp LBKT     &kp RBKT   &kp N  &kp M      &kp COMMA  &kp DOT  &none  &kp RSHFT
+&kp ESC    &kp Q  &kp W  &kp E  &kp R      &kp T                          &kp Y  &kp U      &kp I  &kp O  &kp P  &kp BACKSPACE
+&kp TAB    &kp A  &kp S  &kp D  &kp F      &kp G                          &kp H  &kp J      &kp K  &kp L  &none  &kp LGUI
+&kp LSHFT  &kp Z  &kp X  &kp C  &kp V      &kp B  &kp LBKT     &kp RBKT   &kp N  &kp M      &none  &none  &none  &kp RSHFT
                                 &kp LCTRL  &mo 2  &kp SPACE    &kp ENTER  &mo 3  &kp RCTRL
             >;
 
@@ -106,10 +122,10 @@
 
         nav {
             bindings = <
-&trans  &kp RU_N1  &kp RU_N2     &kp RU_N3  &kp RU_N4      &kp RU_N5                    &kp RU_N6        &kp RU_N7  &kp RU_N8  &kp RU_N9  &trans  &trans
-&trans  &trans     &kp LEFT      &kp DOWN   &kp RIGHT      &kp RET                      &kp PG_DN        &kp N4     &kp N5     &kp N6     &trans  &trans
-&trans  &trans     &kp LC(LEFT)  &kp CAPS   &kp LC(RIGHT)  &kp DEL    &trans    &trans  &kp PRINTSCREEN  &kp N1     &kp N2     &kp N3     &trans  &trans
-                                            &trans         &trans     &trans    &trans  &mo 5            &trans
+&trans  &kp RU_N1  &kp RU_N2     &kp RU_N3   &kp RU_N4      &kp RU_N5                          &kp RU_N6        &kp RU_N7  &kp RU_N8  &kp RU_N9  &trans  &trans
+&trans  &kp HOME   &kp INSERT    &kp DELETE  &kp END        &kp LS(ENTER)                      &kp RIGHT        &kp DOWN   &kp UP     &kp LEFT   &trans  &trans
+&trans  &trans     &kp LC(LEFT)  &kp CAPS    &kp LC(RIGHT)  &kp PRINTSCREEN  &trans    &trans  &kp PRINTSCREEN  &kp N1     &kp N2     &kp N3     &trans  &trans
+                                             &trans         &trans           &trans    &trans  &mo 5            &trans
             >;
 
             display-name = "Navigation";
@@ -117,10 +133,10 @@
 
         sym_en {
             bindings = <
-&trans  &kp AT    &kp LT    &kp EQUAL  &kp GT    &kp GRAVE                    &trans     &kp LBKT  &kp UNDER  &kp RBKT  &trans    &trans
-&trans  &kp BSLH  &kp LPAR  &kp MINUS  &kp RPAR  &kp PLUS                     &kp PRCNT  &kp LBRC  &kp SEMI   &kp RBRC  &kp EXCL  &kp QUESTION
-&trans  &kp HASH  &kp STAR  &kp COLON  &kp FSLH  &trans     &trans    &trans  &trans     &kp PIPE  &kp TILDE  &kp AMPS  &kp DOT   &trans
-                                       &trans    &mo 5      &trans    &trans  &trans     &trans
+&trans  &kp TILDE  &kp LT    &kp EQUAL  &kp GT    &kp GRAVE                    &kp AMPS     &kp LBKT     &kp UNDER   &kp RBKT  &kp EXCL  &trans
+&trans  &kp BSLH   &kp LPAR  &kp MINUS  &kp RPAR  &kp PLUS                     &kp DOLLAR   &kp LBRC     &td_dotcom  &kp RBRC  &kp SQT   &kp DQT
+&trans  &kp HASH   &kp STAR  &kp QMARK  &kp FSLH  &kp CARET  &trans    &trans  &kp PERCENT  &kp AT_SIGN  &kp COMMA   &kp DOT   &kp DOT   &trans
+                                        &trans    &mo 5      &trans    &trans  &trans       &trans
             >;
 
             display-name = "Symbols";
@@ -129,9 +145,9 @@
         sym_ru {
             display-name = "Symbols";
             bindings = <
-&trans  &en AT_SIGN  &en LT        &kp EQUAL     &en GT       &en GRAVE                        &trans          &en LBKT  &kp UNDER    &en RBKT  &trans      &trans
-&trans  &kp RU_BSLH  &kp LPAR      &kp MINUS     &kp RPAR     &kp PLUS                         &kp RU_PERCENT  &en LBRC  &kp RU_SEMI  &kp RBRC  &kp EXCL    &kp RU_QUESTION
-&trans  &en HASH     &kp RU_ASTRK  &kp RU_COLON  &kp RU_FSLH  &kp RU_NUMERO  &trans    &trans  &trans          &en PIPE  &en TILDE    &en AMPS  &kp RU_DOT  &trans
+&trans  &en AT_SIGN  &en LT        &kp EQUAL     &en GT       &en GRAVE                        &kp AMPERSAND   &en LBKT     &kp UNDER      &en RBKT  &trans      &trans
+&trans  &kp RU_BSLH  &kp LPAR      &kp MINUS     &kp RPAR     &kp PLUS                         &kp RU_PERCENT  &en LBRC     &td_dotcom_en  &kp RBRC  &kp EXCL    &kp RU_QUESTION
+&trans  &en HASH     &kp RU_ASTRK  &kp RU_COLON  &kp RU_FSLH  &kp RU_NUMERO  &trans    &trans  &kp DOLLAR      &en AT_SIGN  &en COMMA      &en DOT   &kp RU_DOT  &trans
                                                  &trans       &mo 5          &trans    &trans  &trans          &trans
             >;
         };
