@@ -133,9 +133,9 @@
 
         sym_en {
             bindings = <
-&trans  &kp TILDE  &kp LT    &kp EQUAL  &kp GT    &kp GRAVE                    &kp AMPS     &kp LBKT     &kp UNDER   &kp RBKT  &kp EXCL  &trans
-&trans  &kp BSLH   &kp LPAR  &kp MINUS  &kp RPAR  &kp PLUS                     &kp DOLLAR   &kp LBRC     &td_dotcom  &kp RBRC  &kp SQT   &kp DQT
-&trans  &kp HASH   &kp STAR  &kp QMARK  &kp FSLH  &kp CARET  &trans    &trans  &kp PERCENT  &kp AT_SIGN  &kp COMMA   &kp DOT   &kp DOT   &trans
+&trans  &kp TILDE  &kp LT    &kp EQUAL  &kp GT    &kp GRAVE                    &kp CARET    &kp LBKT     &kp UNDER   &kp RBKT  &kp EXCL  &trans
+&trans  &kp BSLH   &kp LPAR  &kp MINUS  &kp RPAR  &kp PLUS                     &kp DOLLAR   &kp LBRC     &td_dotcom  &kp RBRC  &kp SQT   &trans
+&trans  &kp HASH   &kp STAR  &kp QMARK  &kp FSLH  &kp AMPS   &trans    &trans  &kp PERCENT  &kp AT_SIGN  &kp COMMA   &kp DOT   &kp DQT   &trans
                                         &trans    &mo 5      &trans    &trans  &trans       &trans
             >;
 
@@ -145,10 +145,10 @@
         sym_ru {
             display-name = "Symbols";
             bindings = <
-&trans  &en AT_SIGN  &en LT        &kp EQUAL     &en GT       &en GRAVE                        &kp AMPERSAND   &en LBKT     &kp UNDER      &en RBKT  &trans      &trans
-&trans  &kp RU_BSLH  &kp LPAR      &kp MINUS     &kp RPAR     &kp PLUS                         &kp RU_PERCENT  &en LBRC     &td_dotcom_en  &kp RBRC  &kp EXCL    &kp RU_QUESTION
-&trans  &en HASH     &kp RU_ASTRK  &kp RU_COLON  &kp RU_FSLH  &kp RU_NUMERO  &trans    &trans  &kp DOLLAR      &en AT_SIGN  &en COMMA      &en DOT   &kp RU_DOT  &trans
-                                                 &trans       &mo 5          &trans    &trans  &trans          &trans
+&trans  &en TILDE    &en LT        &kp EQUAL  &en GT       &en GRAVE                    &en CARET    &en LBKT     &kp UNDER      &en RBKT  &kp EXCL  &trans
+&trans  &kp RU_BSLH  &kp LPAR      &kp MINUS  &kp RPAR     &kp PLUS                     &en DOLLAR   &en LBRC     &td_dotcom_en  &kp RBRC  &kp SQT   &trans
+&trans  &en HASH     &kp RU_ASTRK  &kp QMARK  &kp RU_FSLH  &en AMPS   &trans    &trans  &kp PERCENT  &en AT_SIGN  &en COMMA      &en DOT   &kp DQT   &trans
+                                              &trans       &mo 5      &trans    &trans  &trans       &trans
             >;
         };
 
