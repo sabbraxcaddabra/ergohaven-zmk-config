@@ -19,6 +19,16 @@
             key-positions = <15 16>;
             layers = <0>;
         };
+
+        x_letter_ru {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <8 9>;
+        };
+
+        hard_sign_letter_ru {
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <8 7>;
+        };
     };
 
     macros {
@@ -91,6 +101,20 @@
             #binding-cells = <0>;
             bindings = <&en SEMI>, <&en COLON>;
         };
+
+        amp_pipe: amp_pipe {
+            compatible = "zmk,behavior-tap-dance";
+            label = "AMP_PIPE";
+            #binding-cells = <0>;
+            bindings = <&kp AMPS>, <&kp PIPE>;
+        };
+
+        amp_pipe_ru: amp_pipe_ru {
+            compatible = "zmk,behavior-tap-dance";
+            label = "AMP_PIPE_RU";
+            #binding-cells = <0>;
+            bindings = <&en AMPS>, <&en PIPE>;
+        };
     };
 
     keymap {
@@ -122,10 +146,10 @@
 
         nav {
             bindings = <
-&trans  &kp RU_N1  &kp RU_N2     &kp RU_N3   &kp RU_N4      &kp RU_N5                          &kp RU_N6        &kp RU_N7  &kp RU_N8  &kp RU_N9  &trans  &trans
-&trans  &kp HOME   &kp INSERT    &kp DELETE  &kp END        &kp LS(ENTER)                      &kp RIGHT        &kp DOWN   &kp UP     &kp LEFT   &trans  &trans
-&trans  &trans     &kp LC(LEFT)  &kp CAPS    &kp LC(RIGHT)  &kp PRINTSCREEN  &trans    &trans  &kp PRINTSCREEN  &kp N1     &kp N2     &kp N3     &trans  &trans
-                                             &trans         &trans           &trans    &trans  &mo 5            &trans
+&trans  &kp RU_N1  &kp RU_N2     &kp RU_N3   &kp RU_N4      &kp RU_N5                        &kp RU_N6        &kp RU_N7    &kp RU_N8      &kp RU_N9  &kp RU_N0  &trans
+&trans  &kp HOME   &kp INSERT    &kp DELETE  &kp END        &kp LS(ENTER)                    &kp RIGHT        &kp DOWN     &kp UP         &kp LEFT   &trans     &trans
+&trans  &trans     &kp LC(LEFT)  &kp CAPS    &kp LC(RIGHT)  &kp LS(TAB)    &trans    &trans  &kp PRINTSCREEN  &kp PAGE_UP  &kp PAGE_DOWN  &trans     &trans     &trans
+                                             &trans         &trans         &trans    &trans  &mo 5            &trans
             >;
 
             display-name = "Navigation";
@@ -135,7 +159,7 @@
             bindings = <
 &trans  &kp TILDE  &kp LT    &kp EQUAL  &kp GT    &kp GRAVE                    &kp CARET    &kp LBKT     &kp UNDER   &kp RBKT  &kp EXCL  &trans
 &trans  &kp BSLH   &kp LPAR  &kp MINUS  &kp RPAR  &kp PLUS                     &kp DOLLAR   &kp LBRC     &td_dotcom  &kp RBRC  &kp SQT   &trans
-&trans  &kp HASH   &kp STAR  &kp QMARK  &kp FSLH  &kp AMPS   &trans    &trans  &kp PERCENT  &kp AT_SIGN  &kp COMMA   &kp DOT   &kp DQT   &trans
+&trans  &kp HASH   &kp STAR  &kp QMARK  &kp FSLH  &amp_pipe  &trans    &trans  &kp PERCENT  &kp AT_SIGN  &kp COMMA   &kp DOT   &kp DQT   &trans
                                         &trans    &mo 5      &trans    &trans  &trans       &trans
             >;
 
@@ -145,10 +169,10 @@
         sym_ru {
             display-name = "Symbols";
             bindings = <
-&trans  &en TILDE    &en LT        &kp EQUAL  &en GT       &en GRAVE                    &en CARET    &en LBKT     &kp UNDER      &en RBKT  &kp EXCL  &trans
-&trans  &kp RU_BSLH  &kp LPAR      &kp MINUS  &kp RPAR     &kp PLUS                     &en DOLLAR   &en LBRC     &td_dotcom_en  &kp RBRC  &kp SQT   &trans
-&trans  &en HASH     &kp RU_ASTRK  &kp QMARK  &kp RU_FSLH  &en AMPS   &trans    &trans  &kp PERCENT  &en AT_SIGN  &en COMMA      &en DOT   &kp DQT   &trans
-                                              &trans       &mo 5      &trans    &trans  &trans       &trans
+&trans  &en TILDE    &en LT        &kp EQUAL  &en GT       &en GRAVE                       &en CARET    &en LBKT     &kp UNDER      &en RBKT  &kp EXCL  &trans
+&trans  &kp RU_BSLH  &kp LPAR      &kp MINUS  &kp RPAR     &kp PLUS                        &en DOLLAR   &en LBRC     &td_dotcom_en  &kp RBRC  &kp SQT   &trans
+&trans  &en HASH     &kp RU_ASTRK  &kp QMARK  &kp RU_FSLH  &amp_pipe_ru  &trans    &trans  &kp PERCENT  &en AT_SIGN  &en COMMA      &en DOT   &kp DQT   &trans
+                                              &trans       &mo 5         &trans    &trans  &trans       &trans
             >;
         };
 
