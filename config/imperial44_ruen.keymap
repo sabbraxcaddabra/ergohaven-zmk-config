@@ -148,9 +148,9 @@
 
         nav {
             bindings = <
-&trans  &kp RU_N1  &kp RU_N2     &kp RU_N3   &kp RU_N4      &kp RU_N5                        &kp RU_N6        &kp RU_N7    &kp RU_N8      &kp RU_N9  &kp RU_N0  &trans
-&trans  &kp HOME   &kp INSERT    &kp DELETE  &kp END        &kp LS(ENTER)                    &kp RIGHT        &kp DOWN     &kp UP         &kp LEFT   &trans     &trans
-&trans  &trans     &kp LC(LEFT)  &kp CAPS    &kp LC(RIGHT)  &kp LS(TAB)    &trans    &trans  &kp PRINTSCREEN  &kp PAGE_UP  &kp PAGE_DOWN  &trans     &trans     &trans
+&trans  &kp RU_N1  &kp RU_N2     &kp RU_N3   &kp RU_N4      &kp RU_N5                        &kp RU_N6        &kp RU_N7    &kp RU_N8      &kp RU_N9        &kp RU_N0  &trans
+&trans  &kp HOME   &kp INSERT    &kp DELETE  &kp END        &kp LS(ENTER)                    &kp LEFT_ARROW   &kp DOWN     &kp UP         &kp RIGHT_ARROW  &trans     &trans
+&trans  &trans     &kp LC(LEFT)  &kp CAPS    &kp LC(RIGHT)  &kp LS(TAB)    &trans    &trans  &kp PRINTSCREEN  &kp PAGE_UP  &kp PAGE_DOWN  &trans           &trans     &trans
                                              &trans         &trans         &trans    &trans  &mo 5            &trans
             >;
 
