@@ -153,7 +153,7 @@
             bindings = <
 &trans  &none    &kp HOME      &kp UP    &kp END          &kp LS(TAB)                       &kp ESC        &kp N7        &kp N8        &kp N9        &kp PRINTSCREEN  &trans
 &trans  &kp ESC  &kp LEFT      &kp DOWN  &kp RIGHT_ARROW  &kp LS(RET)                       &kp PAGE_UP    &kp NUMBER_4  &kp NUMBER_5  &kp N6        &kp N0           &trans
-&trans  &trans   &kp LC(LEFT)  &none     &kp LC(RIGHT)    &kp LS(TAB)  &trans    &trans     &kp PAGE_DOWN  &kp N1        &kp NUMBER_2  &kp NUMBER_3  &trans           &to 1
+&trans  &trans   &kp LC(LEFT)  &none     &kp LC(RIGHT)    &kp LS(TAB)  &trans    &trans     &kp PAGE_DOWN  &kp N1        &kp NUMBER_2  &kp NUMBER_3  &tog 1           &trans
                                          &trans           &trans       &trans    &kp ENTER  &mo 5          &trans
             >;
 
@@ -174,10 +174,10 @@
         sym_ru {
             display-name = "Symbols";
             bindings = <
-&trans  &en AT_SIGN  &en LT        &kp EQUAL     &en GT       &en GRAVE                        &trans          &en LBKT  &kp UNDER  &en RBKT  &trans      &trans
-&trans  &kp RU_BSLH  &kp LPAR      &kp MINUS     &kp RPAR     &kp PLUS                         &kp RU_PERCENT  &en LBRC  &dotcom    &en RBRC  &kp EXCL    &kp RU_QUESTION
-&trans  &en HASH     &kp RU_ASTRK  &kp RU_COLON  &kp RU_FSLH  &kp RU_NUMERO  &trans    &trans  &trans          &en PIPE  &en TILDE  &en AMPS  &kp RU_DOT  &trans
-                                                 &trans       &mo 5          &trans    &trans  &trans          &trans
+&trans  &kp RU_NUMERO  &en LT        &kp EQUAL  &en GT       &en GRAVE                    &en AMPERSAND  &en LBKT     &kp UNDER  &en RBKT   &kp EXCLAMATION  &trans
+&trans  &kp RU_BSLH    &kp LPAR      &kp MINUS  &kp RPAR     &kp PLUS                     &en DOLLAR     &en LBRC     &dotcom    &en RBRC   &en SQT          &trans
+&trans  &en HASH       &kp RU_ASTRK  &kp QMARK  &kp RU_FSLH  &en TILDE  &trans    &trans  &kp PERCENT    &en AT_SIGN  &en PIPE   &en CARET  &en DQT          &trans
+                                                &trans       &mo 5      &trans    &trans  &trans         &trans
             >;
         };
 
@@ -190,6 +190,15 @@
             >;
 
             display-name = "Adjust";
+        };
+
+        layer_6 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                                &trans  &trans  &trans    &trans  &trans  &trans
+            >;
         };
     };
 };
