@@ -4,6 +4,8 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 
+&mt { tapping-term-ms = <350>; };
+
 / {
     combos {
         compatible = "zmk,combos";
@@ -134,6 +136,13 @@
             #binding-cells = <0>;
             bindings = <&kp SEMI>, <&kp COLON>;
         };
+
+        dotcom_ru: dotcom_ru {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DOTCOM_RU";
+            #binding-cells = <0>;
+            bindings = <&en SEMI>, <&en COLON>;
+        };
     };
 
     keymap {
@@ -188,9 +197,9 @@
         sym_ru {
             display-name = "Symbols";
             bindings = <
-&trans  &kp RU_NUMERO  &en LT        &kp EQUAL  &en GT       &en GRAVE                    &en AMPERSAND  &en LBKT     &kp UNDER  &en RBKT   &kp EXCLAMATION  &trans
-&trans  &kp RU_BSLH    &kp LPAR      &kp MINUS  &kp RPAR     &kp PLUS                     &en DOLLAR     &en LBRC     &dotcom    &en RBRC   &en SQT          &trans
-&trans  &en HASH       &kp RU_ASTRK  &kp QMARK  &kp RU_FSLH  &en TILDE  &trans    &trans  &kp PERCENT    &en AT_SIGN  &en PIPE   &en CARET  &en DQT          &trans
+&trans  &kp RU_NUMERO  &en LT        &kp EQUAL  &en GT       &en GRAVE                    &en AMPERSAND  &en LBKT     &kp UNDER   &en RBKT   &kp EXCLAMATION  &trans
+&trans  &kp RU_BSLH    &kp LPAR      &kp MINUS  &kp RPAR     &kp PLUS                     &en DOLLAR     &en LBRC     &dotcom_ru  &en RBRC   &en SQT          &trans
+&trans  &en HASH       &kp RU_ASTRK  &kp QMARK  &kp RU_FSLH  &en TILDE  &trans    &trans  &kp PERCENT    &en AT_SIGN  &en PIPE    &en CARET  &en DQT          &trans
                                                 &trans       &mo 5      &trans    &trans  &trans         &trans
             >;
         };
