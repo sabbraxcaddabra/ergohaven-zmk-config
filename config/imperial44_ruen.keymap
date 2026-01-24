@@ -22,12 +22,14 @@
 
         dot {
             bindings = <&kp RU_DOT>;
-            key-positions = <34 35>;
+            key-positions = <20 21>;
+            layers = <1>;
         };
 
         comma {
             bindings = <&kp RU_COMMA>;
-            key-positions = <33 34>;
+            key-positions = <19 20>;
+            layers = <1>;
         };
 
         ru_h {
@@ -38,6 +40,18 @@
         ru_solid_sign {
             bindings = <&kp RIGHT_BRACKET>;
             key-positions = <7 8>;
+        };
+
+        comma_en {
+            bindings = <&kp COMMA>;
+            key-positions = <19 20>;
+            layers = <0>;
+        };
+
+        dot_en {
+            bindings = <&kp DOT>;
+            key-positions = <20 21>;
+            layers = <0>;
         };
     };
 
@@ -118,7 +132,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "DOTCOM";
             #binding-cells = <0>;
-            bindings = <&kp SEMI>, <&kp RU_COLON>;
+            bindings = <&kp SEMI>, <&kp COLON>;
         };
     };
 
