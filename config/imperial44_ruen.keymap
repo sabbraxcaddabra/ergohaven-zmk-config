@@ -199,7 +199,7 @@
             bindings = <
 &trans  &kp RU_NUMERO  &en LT        &kp EQUAL  &en GT       &en GRAVE                    &en AMPERSAND  &en LBKT     &kp UNDER   &en RBKT   &kp EXCLAMATION  &trans
 &trans  &kp RU_BSLH    &kp LPAR      &kp MINUS  &kp RPAR     &kp PLUS                     &en DOLLAR     &en LBRC     &dotcom_ru  &en RBRC   &en SQT          &trans
-&trans  &en HASH       &kp RU_ASTRK  &kp QMARK  &kp RU_FSLH  &en TILDE  &trans    &trans  &kp PERCENT    &en AT_SIGN  &en PIPE    &en CARET  &en DQT          &trans
+&trans  &en HASH       &kp RU_ASTRK  &en QMARK  &kp RU_FSLH  &en TILDE  &trans    &trans  &kp PERCENT    &en AT_SIGN  &en PIPE    &en CARET  &en DQT          &trans
                                                 &trans       &mo 5      &trans    &trans  &trans         &trans
             >;
         };
