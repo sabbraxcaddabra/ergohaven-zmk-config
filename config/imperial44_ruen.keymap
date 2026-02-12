@@ -5,9 +5,9 @@
 #include <dt-bindings/zmk/outputs.h>
 
 &mt {
-    tapping-term-ms = <300>;
+    tapping-term-ms = <200>;
     flavor = "tap-preferred";
-    quick-tap-ms = <200>;
+    quick-tap-ms = <150>;
 };
 
 / {
@@ -178,7 +178,7 @@
 
         nav {
             bindings = <
-&trans  &none    &kp HOME      &kp UP    &kp END          &kp LS(TAB)                       &kp ESC        &kp N7        &kp N8        &kp N9        &kp PRINTSCREEN  &trans
+&trans  &kp ESC  &kp HOME      &kp UP    &kp END          &kp LS(TAB)                       &kp ESC        &kp N7        &kp N8        &kp N9        &kp PRINTSCREEN  &trans
 &trans  &kp TAB  &kp LEFT      &kp DOWN  &kp RIGHT_ARROW  &kp LS(RET)                       &kp PAGE_UP    &kp NUMBER_4  &kp NUMBER_5  &kp N6        &kp N0           &trans
 &trans  &trans   &kp LC(LEFT)  &none     &kp LC(RIGHT)    &kp LS(TAB)  &trans    &trans     &kp PAGE_DOWN  &kp N1        &kp NUMBER_2  &kp NUMBER_3  &tog 1           &trans
                                          &trans           &trans       &trans    &kp ENTER  &mo 5          &trans
