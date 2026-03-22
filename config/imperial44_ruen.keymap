@@ -59,6 +59,11 @@
             key-positions = <20 21>;
             layers = <0>;
         };
+
+        kaps_word {
+            bindings = <&caps_word>;
+            key-positions = <15 20>;
+        };
     };
 
     macros {
